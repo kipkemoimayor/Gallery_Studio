@@ -39,7 +39,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 INSTALLED_APPS = [
     'bootstrap4',
-    'image_studio.apps.ImageStudioConfig'
+    'image_studio.apps.ImageStudioConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -91,7 +91,7 @@ if config('MODE')=='dev':
             'NAME': config('DB_NAME'),
             'USER':config("DB_USER"),
             'PASSWORD':config('DB_PASSWORD'),
-            'HOST':confi("DB_HOST")
+            'HOST':config("DB_HOST")
         }
     }
 
@@ -104,7 +104,7 @@ else:
 
 db_from_evn=dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_evn)
-ALLOWED_HOST=config('ALLOWED_HOST',cast=Csv)
+ALLOWED_HOST=config('ALLOWED_HOSTS',cast=Csv)
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators

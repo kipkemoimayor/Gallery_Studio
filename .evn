@@ -1,9 +1,0 @@
-SECRET_KEY="cOLLins@#$%^&*()"
-DEBUG=True
-DB_NAME='studio'
-DB_USER='collo'
-DB_PASSWORD='collins'
-DB_HOST='127.0.0.1'
-MODE='dev'
-ALLOWED_HOST='*'
-DISABLE_COLLECTSTATIC=1
