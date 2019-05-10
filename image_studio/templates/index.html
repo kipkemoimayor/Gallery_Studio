@@ -17,13 +17,30 @@
 
   </div>
   <div class="container-fluid">
-    <div class="card">
-      <div class="card-body">
-        
+    <div class="row">
+      {%for image in images%}
+      <div class="col-md-6">
+        <div class="card view overlay ">
+          <div class="card-body">
 
+              <img class="img-fluid rgba-red-slight" src="{{image.image.url}}" alt="">
+              <p>{{image.name}}</p>
+              <div class="mask flex-center waves-effect waves-light">
+    <p class="white-text">{{image.name}}</p>
+  </div>
+
+
+
+
+          </div>
+
+
+        </div>
       </div>
+      {%endfor%}
 
     </div>
+
 
 
   </div>

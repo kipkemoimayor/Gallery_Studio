@@ -25,5 +25,10 @@ class Image(models.Model):
     def __str__(self):
         return self.name
 
+    @classmethod
+    def get_images(cls):
+        images=cls.objects.all()
+        return images
+
     class Meta:
         ordering=['name']

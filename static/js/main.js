@@ -5,7 +5,6 @@ $(document).ready(function(){
   $("#clickSearch").click(function(){
     $("#search").fadeIn(2000)
     $("#search").show()
-
-
   })
+  
 })
