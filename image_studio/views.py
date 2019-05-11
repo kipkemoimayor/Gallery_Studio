@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Image,Location
-
+import pyperclip
 
 # Create your views here.
 
@@ -22,5 +22,10 @@ def location(request,locate_id):
         images=Image.objects.filter(locate=locate_id)
     except Exception as e:
         raise 404
+
+    '''
+    copy and paste
+    '''
+
 
     return render(request,'location.html',{'images':images,'locations':locations})
