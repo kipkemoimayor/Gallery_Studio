@@ -40,6 +40,7 @@
     color: black;
 }
 .bottom-left{
+  transition: 300ms;
   position: absolute;
   bottom: 0.12px;
   left:0px;
