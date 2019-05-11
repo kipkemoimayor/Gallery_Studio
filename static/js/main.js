@@ -6,5 +6,9 @@ $(document).ready(function(){
     $("#search").fadeIn(2000)
     $("#search").show()
   })
-  
+ //  $('img').click( function() {
+ //     $("#showImg").empty();
+ //     var image = $(this).attr("src");
+ //     $("#showImg").append("<img class='img-responsive' src='" + image + "' />")
+ // })
 })
