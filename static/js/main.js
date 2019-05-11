@@ -8,7 +8,7 @@ $(document).ready(function(){
   })
   $("#copy").click(function(){
     $("#copy").hide()
-    
+
     $("#paste").show()
   })
   // $("#paste").click(function(){
