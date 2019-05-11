@@ -49,7 +49,7 @@
 
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">{{image.name}}</h5>
+                <h5 class="modal-title" id="exampleModalLongTitle">{{image.name}} <i>Taken on : {{image.upload_time}}</i></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -57,10 +57,14 @@
               <div id="showImg" class="modal-body">
                 <img class="img-fluid" src="{{image.image.url}}" />
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Copy Link address</button>
-                <button type="button" class="btn btn-primary">Share</button>
+              <div style="text-align:center" class="">
+              <i class="">{{image.decription}}</i> <i class="fas fa-map-marker-alt">{{image.locate}}</i>
+
+              </div>
+              <div  style="text-align:center" class="modal-footer">
+                <button id="copy" type="button" class="btn btn-primary btn-sm"><i class="fas fa-copy"> Copy link</i></button>
+                <button id='paste' type="button" class="btn btn-primary btn-sm"><i class="fas fa-paste"> Copied</i></button>
+                <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-share-alt"> Share</i></button>
               </div>
             </div>
           </div>

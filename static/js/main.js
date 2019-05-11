@@ -6,7 +6,12 @@ $(document).ready(function(){
     $("#search").fadeIn(2000)
     $("#search").show()
   })
-  // $(".link").mouseover(function(){
-  //   $(".bottom-left").show()
+  $("#copy").click(function(){
+    $("#copy").hide()
+    
+    $("#paste").show()
+  })
+  // $("#paste").click(function(){
+  //   $("#copy").hide()
   // })
 })
