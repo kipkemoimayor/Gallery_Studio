@@ -20,6 +20,12 @@ class Category(models.Model):
     def __str__(self):
         return self.Category
 
+    @classmethod
+    def search_image(cls,search_word):
+        image=cls.objects.filter(Category__icontains=search_word)
+        return image
+
+
 class Image(models.Model):
     name=models.CharField(max_length=30)
     decription=models.CharField(max_length=200)
@@ -41,10 +47,6 @@ class Image(models.Model):
     #     images=cls.objects.filter(locate=1)
     #     return images
 
-    @classmethod
-    def search_image(cls,search_word):
-        image=cls.objects.filter(categ__icontains=search_word)
-        return image
 
 
 

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Image,Location
+from .models import Image,Location,Category
 import pyperclip
 
 # Create your views here.
@@ -31,11 +31,27 @@ def location(request,locate_id):
     return render(request,'location.html',{'images':images,'locations':locations})
 
 def search(request):
-    if 'category' in request.GET and request.GET['category']:
-        search_word=request.GET.get('category')
-        search_images=Image.search_image(search_word)
+    if 'Category' in request.GET and request.GET['Category']:
+        search_word=request.GET.get('Category')
+        search_images=Category.search_image(search_word)
+        arr=[]
+        for i in search_images:
+            arr.append(i.id)
 
-        return render(request,"search.html",{"images":search_images})
+        category=arr[0]
+        images=Image.objects.filter(categ_id=category)
+
+        '''
+        getting locations
+        '''
+        try:
+            locations=Location.get_location()
+        except Exception as e:
+            raise 404
+
+
+
+        return render(request,"search.html",{"images":images,'categories':search_images,"locations":locations})
 
     else:
         message="No image found"
