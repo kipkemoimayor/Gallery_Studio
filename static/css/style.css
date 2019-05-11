@@ -41,8 +41,9 @@
 }
 .bottom-left{
   position: absolute;
-  bottom: 1px;
-  left:5px;
+  bottom: 0.12px;
+  left:0px;
   color: white;
   background-color: rgba(0,0,0,0.5);
+  width: 100%;
 }
