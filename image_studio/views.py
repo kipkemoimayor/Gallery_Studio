@@ -29,3 +29,14 @@ def location(request,locate_id):
 
 
     return render(request,'location.html',{'images':images,'locations':locations})
+
+def search(request):
+    if 'category' in request.GET and request.GET['category']:
+        search_word=request.GET.get('category')
+        search_images=Image.search_image(search_word)
+
+        return render(request,"search.html",{"images":search_images})
+
+    else:
+        message="No image found"
+        return render(request,"search.html",{"message":message})
