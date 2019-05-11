@@ -9,7 +9,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.4) !important;
-  height: 70vh;
+  height: 60vh;
 }
 .navbar{
   background-color: #3A3238 !important;
@@ -38,4 +38,11 @@
 }
 #drop a:hover{
     color: black;
+}
+.bottom-left{
+  position: absolute;
+  bottom: 1px;
+  left:5px;
+  color: white;
+  background-color: rgba(0,0,0,0.5);
 }

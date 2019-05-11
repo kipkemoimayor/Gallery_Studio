@@ -36,10 +36,10 @@ class Image(models.Model):
         images=cls.objects.all()
         return images
 
-    @classmethod
-    def get_by_location(cls):
-        images=cls.objects.filter(locate=1)
-        return images
+    # @classmethod
+    # def get_by_location(cls):
+    #     images=cls.objects.filter(locate=1)
+    #     return images
 
 
 

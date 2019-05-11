@@ -20,21 +20,20 @@
     <div class="row">
       {%for image in images%}
       <div class="col-md-4">
-        <div class="card view overlay ">
-          <div class="card-body">
+        <div class=" view overlay ">
+
             <a id="link1" data-toggle="modal" data-target="#{{image.name}}" href="">
-              <img id="{{image.id}}"  class="img-fluid rgba-red-slight" src="{{image.image.url}}" alt="">
-              <p>{{image.name}}</p>
-              <div class="mask flex-center waves-effect waves-light">
+            <img  class="img-fluid rgba-red-slight" src="{{image.image.url}}" alt="">
+            <div class="mask flex-center waves-effect waves-light">
                 <p class="white-text">{{image.name}}</p>
-
-
-
+             </div>
+             <div class="bottom-left">
+               <p>{{image.decription}} location: {{image.locate}} </p>
              </div>
 
              </a>
 
-          </div>
+
 
 
         </div>
@@ -61,6 +60,7 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Copy Link address</button>
+                <button type="button" class="btn btn-primary">Share</button>
               </div>
             </div>
           </div>
