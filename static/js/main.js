@@ -7,11 +7,17 @@ $(document).ready(function(){
     $("#search").show()
   })
   $("#copy").click(function(){
-    $("#copy").hide()
+    alert("done")
 
     $("#paste").show()
   })
   // $("#paste").click(function(){
   //   $("#copy").hide()
   // })
+  $(function () {
+$('[data-toggle="popover"]').popover()
+})
+$('.popover-dismiss').popover({
+trigger: 'focus'
+})
 })
