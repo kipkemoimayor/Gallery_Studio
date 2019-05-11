@@ -9,3 +9,7 @@ def home(request):
     message='Be  am beated'
     images=Image.get_images()
     return render(request,"index.html",{'message':message,'images':images})
+
+def location(request):
+
+    return render(request,'location.html')
