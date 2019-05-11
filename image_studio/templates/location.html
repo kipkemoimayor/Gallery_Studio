@@ -1,5 +1,7 @@
 {%extends 'base.html'%}
 {%block content%}
   {{block.super}}
-  <h1>success</h1>
+  {%for i in images%}
+    <p>{{i.name}}</p>
+  {%endfor%}
 {%endblock%}

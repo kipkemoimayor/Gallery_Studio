@@ -7,6 +7,12 @@ class Location(models.Model):
 
     def __str__(self):
         return self.location
+    @classmethod
+    def get_location(cls):
+        locations=cls.objects.all()
+        return locations
+
+
 
 class Category(models.Model):
     Category=models.CharField(max_length=30)
@@ -29,6 +35,13 @@ class Image(models.Model):
     def get_images(cls):
         images=cls.objects.all()
         return images
+
+    @classmethod
+    def get_by_location(cls):
+        images=cls.objects.filter(locate=1)
+        return images
+
+
 
     class Meta:
         ordering=['name']
