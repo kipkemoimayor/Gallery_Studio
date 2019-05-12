@@ -34,28 +34,31 @@ def search(request):
     if 'Category' in request.GET and request.GET['Category']:
         search_word=request.GET.get('Category')
         search_images=Category.search_image(search_word)
-        arr=[]
-        for i in search_images:
-            arr.append(i.id)
+        if len(search_images)>0:
+            arr=[]
+            for i in search_images:
+                arr.append(i.id)
 
-        category=arr[0]
-        images=Image.objects.filter(categ_id=category)
-
-        '''
-        getting locations
-        '''
-        try:
-            locations=Location.get_location()
-        except Exception as e:
-            raise 404
+            category=arr[0]
+            images=Image.objects.filter(categ_id=category)
 
 
 
-        return render(request,"search.html",{"images":images,'categories':search_images,"locations":locations})
+            '''
+            getting locations
+            '''
+            try:
+                locations=Location.get_location()
+            except Exception as e:
+                raise 404
 
-    else:
-        message="No image found"
-        return render(request,"search.html",{"message":message})
+
+
+            return render(request,"search.html",{"images":images,'categories':search_images,"locations":locations})
+
+        else:
+            message="No image found"
+            return render(request,"search.html",{"message":message})
 def copyclip(request,copy):
     domain='https://herokupp.com'
     pass
