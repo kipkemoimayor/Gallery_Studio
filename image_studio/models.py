@@ -77,3 +77,10 @@ class Image(models.Model):
     def delete_image(self):
         deleted=Image.objects.all().delete()
         return deleted
+
+    '''
+    get image by id
+    '''
+    def get_id(self):
+        image_id=Image.objects.filter(id=1)
+        return image_id

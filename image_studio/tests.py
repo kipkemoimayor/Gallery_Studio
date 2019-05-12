@@ -62,6 +62,11 @@ class ImageTest(TestCase):
             saved=Image.objects.all()
             self.assertTrue(len(saved)==0)
 
+        def test_test_image_id(self):
+            self.new_image.get_id()
+            id=Image.objects.all()
+            self.assertTrue(len(id)>0)
+
 
         def TearDown(self):
             Location.objects.all().delete()
