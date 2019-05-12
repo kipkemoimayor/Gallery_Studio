@@ -7,8 +7,8 @@
     <div class="Xearch" >
       <br>
       <form class="Search form group" role="search" action="{%url 'search'%}">
-        <input placeholder="Search by Category" class="form-control" type="search" name="Category" value="">
-        <i class="search">eg House,Food,line....</i>
+        <input required placeholder="Search by Category" class="form-control" type="search" name="Category" value="">
+        <i class="search">eg Sports,Food,Cars....</i>
 
       </form>
 
@@ -65,7 +65,7 @@
               </div>
               <div  style="text-align:center" class="modal-footer">
                   <div><i id='hide'>https://herokupp.com{{image.image.url}}</i><a id="{{image.id}}" value="{{image.image.url}}"  tabindex="0" data-trigger="focus" data-placement="top" type="button" data-toggle='popover' data-content="Copied" class="btn btn-primary btn-sm"  onclick="status(this)"> <i class="fas fa-copy"> Copy link</i></a></div>
-                <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-share-alt"> Share</i></button>
+                <a target="_blank" href="https://facebook.com/"><button type="button" class="btn btn-primary btn-sm"><i class="fab fa-facebook"> Share</i></button></a>
               </div>
             </div>
           </div>
