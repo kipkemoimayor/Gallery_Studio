@@ -11,7 +11,8 @@ def home(request):
         images=Image.get_images()
 
     except Exception as e:
-        raise  404
+        raise  Http404()
+        
     locations=Location.get_location()
     return render(request,"index.html",{'message':message,'images':images,'locations':locations})
 
@@ -21,7 +22,8 @@ def location(request,locate_id):
         locations=Location.get_location()
         images=Image.objects.filter(locate=locate_id)
     except Exception as e:
-        raise 404
+        raise Http404()
+        assert False
 
     '''
     copy and paste
@@ -49,8 +51,9 @@ def search(request):
             '''
             try:
                 locations=Location.get_location()
-            except Exception as e:
-                raise 404
+            except ValueError:
+                raise Http404()
+                assert False
 
 
 
