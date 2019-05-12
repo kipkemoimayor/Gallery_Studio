@@ -1,1 +1,1 @@
-web: gunicorn gallery_studio.wsgi --log-file -
+web: gunicorn --chdir gallery_studio --log-file - gallery_studio.wsgi:application
