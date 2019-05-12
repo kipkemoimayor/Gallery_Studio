@@ -64,4 +64,6 @@ def search(request):
             return render(request,"search.html",{"message":message})
 def copyclip(request,copy):
     domain='https://herokupp.com'
-    pass
+    image_url="/media/gallery/image_id"
+    path=domain+image_url
+    full_path=pyperclip.copy(path)

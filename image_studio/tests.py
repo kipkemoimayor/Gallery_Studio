@@ -1,5 +1,6 @@
 from django.test import TestCase
 from .models import Image,Location,Category
+from .views import copyclip
 
 # Create your tests here.
 class LocationTest(TestCase):
@@ -72,3 +73,10 @@ class ImageTest(TestCase):
             Location.objects.all().delete()
             Category.objects.all().delete()
             Image.objects.all().delete()
+
+class TestCopyClip(TestCase):
+    def setUp(self):
+        self.data=copyclip()
+
+    def test_copy(self):
+        self.assertTrue(len(self.data)>0)
