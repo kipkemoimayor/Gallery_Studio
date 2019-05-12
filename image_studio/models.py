@@ -12,6 +12,15 @@ class Location(models.Model):
         locations=cls.objects.all()
         return locations
 
+    '''
+    saving location
+    '''
+    def save_location(self):
+        self.save()
+
+    def delete_location(self):
+        location=Location.objects.all().delete()
+        return location
 
 
 class Category(models.Model):
@@ -24,6 +33,9 @@ class Category(models.Model):
     def search_image(cls,search_word):
         image=cls.objects.filter(Category__icontains=search_word)
         return image
+
+    def save_category(self):
+        self.save()
 
 
 class Image(models.Model):
@@ -49,6 +61,19 @@ class Image(models.Model):
 
 
 
-
     class Meta:
         ordering=['name']
+
+    '''
+    saving images to database
+    '''
+
+    def save_image(self):
+        self.save()
+
+
+    #deleting image
+
+    def delete_image(self):
+        deleted=Image.objects.all().delete()
+        return deleted
