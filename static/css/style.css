@@ -64,3 +64,14 @@
 #hide{
 opacity: 0.1;
 }
+#high{
+  text-decoration: underline;
+  padding: 8px;
+  text-decoration-color: green;
+  text-decoration-style: solid;
+}
+.fadeIn{
+  font-weight: 500;
+  font-family: sans-serif;
+  text-transform: capitalize;
+}

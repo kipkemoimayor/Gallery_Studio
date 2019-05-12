@@ -19,6 +19,14 @@
 
   <div class="container-fluid">
     <div class="row">
+      <div class="col-md-2">
+        <h3 class="animated fadeIn">{{word}} Photos <i class="fas fa-info"></i></h3>
+          <h5 id="high">{{images|length}} Photos</h5>
+      </div>
+
+    </div>
+
+    <div class="row">
       {%for image in images%}
       <div class="col-md-4">
         <div class=" view overlay ">

@@ -12,7 +12,7 @@ def home(request):
 
     except Exception as e:
         raise  Http404()
-        
+
     locations=Location.get_location()
     return render(request,"index.html",{'message':message,'images':images,'locations':locations})
 
@@ -57,7 +57,7 @@ def search(request):
 
 
 
-            return render(request,"search.html",{"images":images,'categories':search_images,"locations":locations})
+            return render(request,"search.html",{"images":images,'word':search_word,'categories':search_images,"locations":locations})
 
         else:
             message="No image found"
