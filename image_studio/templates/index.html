@@ -37,7 +37,6 @@
 
 
         </div>
-
         <!-- Modal -->
         <!-- Modal -->
         <div class="modal fade" id="{{image.name}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -62,7 +61,7 @@
 
               </div>
               <div  style="text-align:center" class="modal-footer">
-                <a tabindex="0" data-trigger="focus" data-placement="top" type="button" data-toggle='popover' data-content="Copied" class="btn btn-primary btn-sm"><i class="fas fa-copy"> Copy link</i></a>
+                  <div><i id='hide'>https://herokupp.com{{image.image.url}}</i><a id="{{image.id}}" value="{{image.image.url}}"  tabindex="0" data-trigger="focus" data-placement="top" type="button" data-toggle='popover' data-content="Copied" class="btn btn-primary btn-sm"  onclick="status(this)"> <i class="fas fa-copy"> Copy link</i></a></div>
                 <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-share-alt"> Share</i></button>
               </div>
             </div>

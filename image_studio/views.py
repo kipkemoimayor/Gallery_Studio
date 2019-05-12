@@ -56,3 +56,6 @@ def search(request):
     else:
         message="No image found"
         return render(request,"search.html",{"message":message})
+def copyclip(request,copy):
+    domain='https://herokupp.com'
+    pass
