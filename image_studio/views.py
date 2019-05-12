@@ -62,8 +62,8 @@ def search(request):
         else:
             message="No image found"
             return render(request,"search.html",{"message":message})
-def copyclip(request,copy):
+def copyclip(n):
     domain='https://herokupp.com'
-    image_url="/media/gallery/image_id"
-    path=domain+image_url
+    path=domain+n
     full_path=pyperclip.copy(path)
+    return full_path

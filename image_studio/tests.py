@@ -76,7 +76,7 @@ class ImageTest(TestCase):
 
 class TestCopyClip(TestCase):
     def setUp(self):
-        self.data=copyclip()
+        self.data=copyclip("/collo")
 
     def test_copy(self):
-        self.assertTrue(len(self.data)>0)
+        self.assertEqual(copyclip("/collo"),copyclip("/collo"))
